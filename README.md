@@ -1,1 +1,1 @@
-# LuaSnip snippets for tex version 1.0
+# LuaSnip snippets for \LaTeX version 1.0
