@@ -129,6 +129,12 @@ place <> angle brackets at the positions where you want to place insert
 
 you can use quotes for single-line strings and [[]] for multiline strings
 
+!!!!!!!!!!!
+
+"\\" and [[\]]
+
+!!!!!!!!!!
+
 
 -- \texttt snippet
 "\\texttt{<>}"
