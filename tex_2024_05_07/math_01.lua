@@ -51,7 +51,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "\\right(<>\\left)",
+    "\\left(<>\\right)",
     {
       i(1),
     }
@@ -67,7 +67,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "\\right[<>\\left]",
+    "\\left[<>\\right]",
     {
       i(1),
     }
@@ -83,7 +83,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "\\right|<>\\left|",
+    "\\left|<>\\right|",
     {
       i(1),
     }
@@ -98,7 +98,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "\\right\\{<>\\left\\}",
+    "\\left\\{<>\\right\\}",
     {
       i(1),
     }
@@ -113,7 +113,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "\\right<< <>\\left>>",
+    "\\left<< <>\\right>>",
     {
       i(1),
     }
