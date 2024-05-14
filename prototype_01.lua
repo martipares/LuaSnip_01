@@ -31,10 +31,10 @@ require("luasnip").snippet(
     {
       trig="trigger",
       dscr="description",
-      regTrig=false, -- or true
-      wordTrig = false, -- or true
+      regTrig=true, -- or false (default is false)
+      wordTrig = false, -- or true (default is true)
       priority=100,
-      snippetType="autosnippet"
+      snippetType="autosnippet",
     },
     fmta(
       [[
@@ -57,7 +57,7 @@ require("luasnip").snippet(
       regTrig=false, -- or true
       wordTrig = false, -- or true
       priority=100,
-      snippetType="autosnippet"
+      snippetType="autosnippet",
     },
     fmta(
       "  ",

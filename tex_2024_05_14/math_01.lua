@@ -32,7 +32,8 @@ require("luasnip").snippet(
    {
       trig="mm",
       dscr="$ $",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "$<>$",
@@ -48,7 +49,8 @@ require("luasnip").snippet(
    {
       trig="\\()",
       dscr="( )",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "\\left(<>\\right)",
@@ -64,7 +66,8 @@ require("luasnip").snippet(
    {
       trig="\\[]",
       dscr="[ ]",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "\\left[<>\\right]",
@@ -80,7 +83,8 @@ require("luasnip").snippet(
    {
       trig="\\||",
       dscr="| |",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "\\left|<>\\right|",
@@ -95,7 +99,8 @@ require("luasnip").snippet(
    {
       trig="\\{\\}",
       dscr="{ }",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "\\left\\{<>\\right\\}",
@@ -110,7 +115,8 @@ require("luasnip").snippet(
    {
       trig="\\<>",
       dscr="< >",
-      snippetType="autosnippet"
+      wordTrig = false,
+      snippetType="autosnippet",
     },
   fmta(
     "\\left<< <>\\right>>",

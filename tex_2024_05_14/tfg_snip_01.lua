@@ -62,8 +62,9 @@ require("luasnip").snippet(
 
 require("luasnip").snippet(
     {
-      trig="\\Prim",
-      snippetType="autosnippet"
+      trig="\\Prime",
+      wordTrig = false,
+      snippetType="autosnippet",
     },
     {
       t("^{\\prime}")
