@@ -165,12 +165,14 @@ require("luasnip").snippet(
 require("luasnip").snippet(
     {
       trig="@Arr",
-      dscr="description",
+      dscr="arrow",
       priority=1100,
       snippetType="autosnippet",
     },
     fmta(
-      "\\arrow[<>]",
+      [[
+      \arrow[<>]
+      ]],
       {
       i(1),
       }
@@ -180,16 +182,101 @@ require("luasnip").snippet(
 require("luasnip").snippet(
     {
       trig="@arr",
-      dscr="description",
+      dscr="arrow with label",
       priority=1100,
       snippetType="autosnippet",
     },
     fmta(
-      "\\arrow[<>,'<>'<>]",
+      [[
+      \arrow[<>, "<>"<>]
+      ]],
       {
       i(1),
       i(2),
       i(3),
+      }
+    )
+),
+
+require("luasnip").snippet(
+    {
+      trig="@narr",
+      dscr="named arrow",
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \arrow[<>, "<>"{name=<>}<>]
+      ]],
+      {
+      i(1),
+      i(2),
+      i(3),
+      i(4),
+      }
+    )
+),
+
+require("luasnip").snippet(
+    {
+      trig="@ftarr",
+      dscr="from to arrow",
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \arrow[<>, fom=<>, to=<>]
+      ]],
+      {
+      i(1),
+      i(2),
+      i(3),
+      }
+    )
+),
+
+require("luasnip").snippet(
+    {
+      trig="@larr",
+      dscr="from to arrow with label",
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \arrow[<>, fom=<>, to=<>, "<>"<>]
+      ]],
+      {
+      i(1),
+      i(2),
+      i(3),
+      i(4),
+      i(5),
+      }
+    )
+),
+
+
+require("luasnip").snippet(
+    {
+      trig="@Narr",
+      dscr="from to named arrow",
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \arrow[<>, fom=<>, to=<>, "<>"{name=<>}<>]
+      ]],
+      {
+      i(1),
+      i(2),
+      i(3),
+      i(4),
+      i(5),
+      i(6),
       }
     )
 ),
