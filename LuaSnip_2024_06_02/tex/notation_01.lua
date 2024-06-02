@@ -426,7 +426,7 @@ require("luasnip").snippet(
 require("luasnip").snippet(
     {
       trig="\\sS",
-      snippetType="autosnippet"
+      priority=1100, --      snippetType="autosnippet"
     },
     {
       t("\\mathcal{S}")

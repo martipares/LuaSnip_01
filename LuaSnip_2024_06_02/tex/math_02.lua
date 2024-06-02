@@ -42,8 +42,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 
@@ -60,8 +59,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -77,8 +75,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -94,8 +91,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -111,8 +107,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -128,8 +123,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -145,8 +139,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -162,8 +155,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
@@ -179,8 +171,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 
@@ -197,8 +188,7 @@ require("luasnip").snippet(
       {
       i(1),
       }
-    ),
-    { condition = tex_utils.in_mathzone }
+    ) --     { condition = tex_utils.in_mathzone }
 ),
 
 
@@ -215,9 +205,143 @@ require("luasnip").snippet(
       {
       i(1),
       }
+    ) --     { condition = tex_utils.in_mathzone }
+),
+
+
+
+require("luasnip").snippet(
+    {
+      trig="\\cat",
+      dscr="category",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\cat{<>}",
+      {
+      i(1),
+      }
+    )--     { condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+    {
+      trig="\\fun",
+      dscr="funtor",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\fun{<>}",
+      {
+      i(1),
+      }
+    )--     { condition = tex_utils.in_mathzone }
+),
+
+
+
+
+require("luasnip").snippet(
+    {
+      trig="\\fF",
+      dscr="funtor F",
+      wordTrig = false,
+      snippetType="autosnippet"
+    },
+    {
+      t("\\fun{F}")
+    },
+    { condition = tex_utils.in_mathzone }
+),
+
+
+require("luasnip").snippet(
+    {
+      trig="\\fG",
+      dscr="funtor G",
+      wordTrig = false,
+      snippetType="autosnippet"
+    },
+    {
+      t("\\fun{G}")
+    },
+    { condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+    {
+      trig="\\Id",
+      dscr="Id",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\Id{<>}",
+      {
+      i(1),
+      }
+    )--     { condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+    {
+      trig="\\id",
+      dscr="id",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\id{<>}",
+      {
+      i(1),
+      }
+    )--     { condition = tex_utils.in_mathzone }
+),
+
+
+require("luasnip").snippet(
+    {
+      trig="\\Mor",
+      dscr="Mor",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\Mor{<>}{<>}",
+      {
+      i(1),
+      i(2),
+      }
+    )--     { condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+    {
+      trig="\\frac",
+      dscr="frac",
+      wordTrig = false,
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      "\\frac{<>}{<>}",
+      {
+      i(1),
+      i(2),
+      }
     ),
     { condition = tex_utils.in_mathzone }
 ),
+
+
+
 
 
 }

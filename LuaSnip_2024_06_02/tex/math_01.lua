@@ -29,60 +29,56 @@ return {
 
 require("luasnip").snippet(
     {
-      trig="@cd",
-      dscr="tikz-cd",
-      regTrig=true, -- or false (default is false)
+      trig="@begin",
+      dscr="begin-end",
       wordTrig = false, -- or true (default is true)
       priority=1100,
       snippetType="autosnippet",
     },
     fmta(
       [[
-      \begin{tikzcd}
-       <> & <> \\
-       <> & <>
-      \end{tikzcd}
+      \begin{<>}
+      <>
+      \end{<>}
       ]],
       {
       i(1),
       i(2),
-      i(3),
-      i(4),
+      rep(1),
       }
-    )
+    ),
+    { condition = tex_utils.in_text }
 ),
 
 require("luasnip").snippet(
     {
-      trig="@ocd",
-      dscr="tikz-cd",
-      regTrig=true, -- or false (default is false)
+      trig="@Begin",
+      dscr="label-begin-end",
       wordTrig = false, -- or true (default is true)
       priority=1100,
       snippetType="autosnippet",
     },
     fmta(
       [[
-      \begin{tikzcd}[<>]
-       <> & <> \\
-       <> & <>
-      \end{tikzcd}
+      \begin{<>}\label{<>}
+      <>
+      \end{<>}
       ]],
       {
       i(1),
       i(2),
       i(3),
-      i(4),
-      i(5),
+      rep(1),
       }
-    )
+    ),
+    { condition = tex_utils.in_text }
 ),
+
 
 require("luasnip").snippet(
     {
-      trig="@CD",
-      dscr="tikz-cd",
-      regTrig=true, -- or false (default is false)
+      trig="@equ",
+      dscr="equation",
       wordTrig = false, -- or true (default is true)
       priority=1100,
       snippetType="autosnippet",
@@ -90,26 +86,63 @@ require("luasnip").snippet(
     fmta(
       [[
       \begin{equation*}
-      \begin{tikzcd}
-       <> & <> \\
-       <> & <>
-      \end{tikzcd}
+      <>
+      \end{equation*}
+      ]],
+      {
+      i(1),
+      }
+    ),
+    { condition = tex_utils.in_text }
+),
+
+require("luasnip").snippet(
+    {
+      trig="@Equ",
+      dscr="equation",
+      wordTrig = false, -- or true (default is true)
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \begin{equation}
+      <>
+      \end{equation}
+      ]],
+      {
+      i(1),
+      }
+    ),
+    { condition = tex_utils.in_text }
+),
+
+require("luasnip").snippet(
+    {
+      trig="@lequ",
+      dscr="label-equation",
+      wordTrig = false, -- or true (default is true)
+      priority=1100,
+      snippetType="autosnippet",
+    },
+    fmta(
+      [[
+      \begin{equation*}\label{<>}
+      <>
       \end{equation*}
       ]],
       {
       i(1),
       i(2),
-      i(3),
-      i(4),
       }
-    )
+    ),
+    { condition = tex_utils.in_text }
 ),
 
 require("luasnip").snippet(
     {
-      trig="@LCD",
-      dscr="tikz-cd",
-      regTrig=true, -- or false (default is false)
+      trig="@Lequ",
+      dscr="label-equation",
       wordTrig = false, -- or true (default is true)
       priority=1100,
       snippetType="autosnippet",
@@ -117,168 +150,168 @@ require("luasnip").snippet(
     fmta(
       [[
       \begin{equation}\label{<>}
-      \begin{tikzcd}
-       <> & <> \\
-       <> & <>
-      \end{tikzcd}
+      <>
       \end{equation}
       ]],
       {
       i(1),
       i(2),
-      i(3),
-      i(4),
-      i(5),
       }
-    )
+    ),
+    { condition = tex_utils.in_text }
+),
+
+
+
+
+require("luasnip").snippet(
+   {
+      trig="mm",
+      dscr="$ $",
+      wordTrig = true,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "$<>$",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_text}
+),
+
+
+require("luasnip").snippet(
+   {
+      trig="\\()",
+      dscr="( )",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left(<>\\right)",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
+),
+
+
+require("luasnip").snippet(
+   {
+      trig="\\[]",
+      dscr="[ ]",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left[<>\\right]",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
+),
+
+
+require("luasnip").snippet(
+   {
+      trig="\\||",
+      dscr="| |",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left|<>\\right|",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+   {
+      trig="\\{\\}",
+      dscr="{ }",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left\\{<>\\right\\}",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+   {
+      trig="\\<>",
+      dscr="< >",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left<< <>\\right>>",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
+),
+
+require("luasnip").snippet(
+   {
+      trig="\\R<>",
+      dscr="< >",
+      wordTrig = false,
+      snippetType="autosnippet",
+    },
+  fmta(
+    "\\left\\langle <>\\right\\rangle",
+    {
+      i(1),
+    }
+  ),
+    {condition = tex_utils.in_mathzone }
 ),
 
 require("luasnip").snippet(
     {
-      trig="@OLCD",
-      dscr="tikz-cd",
-      regTrig=true, -- or false (default is false)
-      wordTrig = false, -- or true (default is true)
+      trig="$$$$",
+      dscr="begin-end",
+      wordTrig = true,
       priority=1100,
       snippetType="autosnippet",
     },
     fmta(
       [[
-      \begin{equation}\label{<>}
-      \begin{tikzcd}[<>]
-       <> & <> \\
-       <> & <>
-      \end{tikzcd}
-      \end{equation}
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      i(4),
-      i(5),
-      i(6),
-      }
-    )
-),
-
-require("luasnip").snippet(
-    {
-      trig="@Arr",
-      dscr="arrow",
-      priority=1100,
-      snippetType="autosnippet",
-    },
-    fmta(
-      [[
-      \arrow[<>]
+      \[
+      <>
+      \]
       ]],
       {
       i(1),
       }
-    )
-),
-
-require("luasnip").snippet(
-    {
-      trig="@arr",
-      dscr="arrow with label",
-      priority=1100,
-      snippetType="autosnippet",
-    },
-    fmta(
-      [[
-      \arrow[<>, "<>"<>]
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      }
-    )
-),
-
-require("luasnip").snippet(
-    {
-      trig="@narr",
-      dscr="named arrow",
-      priority=1100,
-      snippetType="autosnippet",
-    },
-    fmta(
-      [[
-      \arrow[<>, "<>"{name=<>}<>]
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      i(4),
-      }
-    )
-),
-
-require("luasnip").snippet(
-    {
-      trig="@ftarr",
-      dscr="from to arrow",
-      priority=1100,
-      snippetType="autosnippet",
-    },
-    fmta(
-      [[
-      \arrow[<>, fom=<>, to=<>]
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      }
-    )
-),
-
-require("luasnip").snippet(
-    {
-      trig="@larr",
-      dscr="from to arrow with label",
-      priority=1100,
-      snippetType="autosnippet",
-    },
-    fmta(
-      [[
-      \arrow[<>, fom=<>, to=<>, "<>"<>]
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      i(4),
-      i(5),
-      }
-    )
+    ),
+    { condition = tex_utils.in_text }
 ),
 
 
 require("luasnip").snippet(
     {
-      trig="@Narr",
-      dscr="from to named arrow",
-      priority=1100,
-      snippetType="autosnippet",
+      trig="\\:",
+      dscr="colon",
+      wordTrig = false,
+      snippetType="autosnippet"
     },
-    fmta(
-      [[
-      \arrow[<>, fom=<>, to=<>, "<>"{name=<>}<>]
-      ]],
-      {
-      i(1),
-      i(2),
-      i(3),
-      i(4),
-      i(5),
-      i(6),
-      }
-    )
+    {
+      t("\\colon")
+    },
+    { condition = tex_utils.in_mathzone }
 ),
 
 }
