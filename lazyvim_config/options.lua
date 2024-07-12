@@ -4,7 +4,7 @@
 
 vim.opt.wrap = true
 
--- vim.opt.spelllang = "en_gb"
-vim.opt.spelllang = "es_es"
+vim.opt.spelllang = "en_gb"
+-- vim.opt.spelllang = "es_es"
 -- vim.opt.spelllang = 'ca_es'
 -- vim.opt.spell = true
