@@ -35,7 +35,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "<> \\righatarrow \\cdots \\righatarrow <>",
+    "<> \\rightarrow \\cdots \\rightarrow <>",
     {
       i(1),
       i(2),
@@ -51,7 +51,7 @@ require("luasnip").snippet(
       snippetType="autosnippet"
     },
   fmta(
-    "0 \\righatarrow 1  \\righatarrow \\cdots \\righatarrow <>",
+    "0 \\rightarrow 1  \\rightarrow \\cdots \\rightarrow <>",
     {
       i(1),
     }
