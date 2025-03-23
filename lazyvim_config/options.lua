@@ -4,7 +4,12 @@
 
 vim.opt.wrap = true
 
+vim.opt.virtualedit = "onemore"
+
+vim.opt.relativenumber = false
+
 vim.opt.spelllang = "en_gb"
 -- vim.opt.spelllang = "es_es"
--- vim.opt.spelllang = 'ca_es'
+-- vim.opt.spelllang = "ca_es"
+
 -- vim.opt.spell = true
